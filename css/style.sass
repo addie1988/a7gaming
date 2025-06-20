@@ -93,13 +93,13 @@ body
         justify-content: flex-end
         margin: 0 auto
         .logo
-            width: 30%
+            width: 50%
             .logo_content
                 a
                     display: inline-block
                     img
         .menu_language
-            width: 70%
+            width: 50%
             display: flex
             align-items: center
             justify-content: space-between
@@ -126,13 +126,18 @@ body
                             flex-wrap: wrap
                             li
                                 a
-                                    font-size: 13px
-                                    color: #fff
+                                    font-size: 16px
+                                    font-weight: $title_font_weight
+                                    background: linear-gradient(to top, #FF9D17, #FFEE53)
+                                    background: -webkit-linear-gradient(to top, #FF9D17, #FFEE53)
+                                    background-clip: text
+                                    -webkit-background-clip: text
+                                    color: transparent
                                     text-decoration: none
                                     transition: all 0.8s ease
                                     margin: 0 20px
                                     &:hover
-                                        color: #000
+                                        color: #fff
                 .show
                     display: block
                 .language
@@ -200,7 +205,12 @@ body
                         ul
                             li
                                 a
-                                    color: #fff
+                                    font-weight: $title_font_weight
+                                    background: linear-gradient(to top, #FF9D17, #FFEE53)
+                                    background: -webkit-linear-gradient(to top, #FF9D17, #FFEE53)
+                                    background-clip: text
+                                    -webkit-background-clip: text
+                                    color: transparent
 .banner
     position: relative
     z-index: -2
