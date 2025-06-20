@@ -549,7 +549,7 @@ body {
 
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .rwd_marquee-container .rwd_marquee-row .rwd_marquee-track .marquee-item {
   flex: 0 0 auto;
-  padding: 0 4px;
+  padding: 0 0;
 }
 
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .rwd_marquee-container .rwd_marquee-row .rwd_marquee-track .marquee-item img {

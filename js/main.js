@@ -372,7 +372,7 @@ const imageUrls_rwd = [
   './images/games_min/games_min_21.png',
   './images/games_min/games_min_22.png',
   './images/games_min/games_min_23.png',
-  './images/games_min/games_min_1.png',
+   './images/games_min/games_min_1.png',
   './images/games_min/games_min_2.png',
   './images/games_min/games_min_3.png',
   './images/games_min/games_min_4.png',
