@@ -563,7 +563,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translateY(-33.333%);
   }
 }
 
@@ -572,16 +572,16 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.333%);
   }
 }
 
 @keyframes scroll-right {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-66.666%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-33.333%);
   }
 }
 
@@ -600,7 +600,7 @@ body {
     width: 100%;
   }
   .a7_games .a7_games_content .a7_games_img .a7_games_img_content .rwd_marquee-container .rwd_marquee-row .rwd_marquee-track {
-    width: 100%;
+    width: 300vw;
   }
 }
 

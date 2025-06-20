@@ -309,8 +309,8 @@ for(let i = 0; i < 10; i++) {
     track.classList.add('reverse');
   }
 
-  // 複製兩遍圖片確保無縫接軌
-  for(let j = 0; j < 2; j++) {
+  // 複製三遍圖片確保無縫接軌
+  for(let j = 0; j < 3; j++) {
     imageUrls.forEach(url => {
       const img = document.createElement('img');
       img.src = url;
@@ -349,52 +349,6 @@ const imageUrls_rwd = [
   './images/games_min/games_min_21.png',
   './images/games_min/games_min_22.png',
   './images/games_min/games_min_23.png',
-  './images/games_min/games_min_1.png',
-  './images/games_min/games_min_2.png',
-  './images/games_min/games_min_3.png',
-  './images/games_min/games_min_4.png',
-  './images/games_min/games_min_5.png',
-  './images/games_min/games_min_6.png',
-  './images/games_min/games_min_7.png',
-  './images/games_min/games_min_8.png',
-  './images/games_min/games_min_9.png',
-  './images/games_min/games_min_10.png',
-  './images/games_min/games_min_11.png',
-  './images/games_min/games_min_12.png',
-  './images/games_min/games_min_13.png',
-  './images/games_min/games_min_14.png',
-  './images/games_min/games_min_15.png',
-  './images/games_min/games_min_16.png',
-  './images/games_min/games_min_17.png',
-  './images/games_min/games_min_18.png',
-  './images/games_min/games_min_19.png',
-  './images/games_min/games_min_20.png',
-  './images/games_min/games_min_21.png',
-  './images/games_min/games_min_22.png',
-  './images/games_min/games_min_23.png',
-   './images/games_min/games_min_1.png',
-  './images/games_min/games_min_2.png',
-  './images/games_min/games_min_3.png',
-  './images/games_min/games_min_4.png',
-  './images/games_min/games_min_5.png',
-  './images/games_min/games_min_6.png',
-  './images/games_min/games_min_7.png',
-  './images/games_min/games_min_8.png',
-  './images/games_min/games_min_9.png',
-  './images/games_min/games_min_10.png',
-  './images/games_min/games_min_11.png',
-  './images/games_min/games_min_12.png',
-  './images/games_min/games_min_13.png',
-  './images/games_min/games_min_14.png',
-  './images/games_min/games_min_15.png',
-  './images/games_min/games_min_16.png',
-  './images/games_min/games_min_17.png',
-  './images/games_min/games_min_18.png',
-  './images/games_min/games_min_19.png',
-  './images/games_min/games_min_20.png',
-  './images/games_min/games_min_21.png',
-  './images/games_min/games_min_22.png',
-  './images/games_min/games_min_23.png',
 ];
 
 const rwd_container = document.getElementById('rwd_container');
@@ -408,8 +362,8 @@ for (let i = 0; i < 10; i++) {
   track.style.animationName = i % 2 === 0 ? 'scroll-left' : 'scroll-right';
   track.style.animationDuration = `${30 + i * 3}s`;
 
-  // 圖片內容放兩份，實現無縫
-  for (let j = 0; j < 2; j++) {
+  // 圖片內容放三份，確保無縫循環
+  for (let j = 0; j < 3; j++) {
     imageUrls_rwd.forEach(url => {
       const item = document.createElement('div');
       item.className = 'marquee-item';
