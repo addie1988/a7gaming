@@ -410,7 +410,7 @@ body
                         position: relative
                         overflow: hidden
                         width: 40%
-                        height: 700px; /* 顯示區高度 */
+                        height: 700px
                         border: 1px solid #333
                         .marquee-track
                             display: flex
@@ -419,7 +419,7 @@ body
                             top: 0
                             left: 0
                             width: 100%
-                            animation: scroll-up 260s linear infinite
+                            animation: scroll-up 110s linear infinite
                             img
                                 width: auto
                                 margin: 5px
@@ -449,26 +449,33 @@ body
                 .rwd_marquee-container
                     display: none
                     flex-direction: column
-                    gap: 8px
-                    overflow: hidden
-                    width: 100%
-                    padding: 10px 0
-                    .rwd_marquee-row
+                    gap: 10px
+                    padding: 20px 0
+                    .marquee-line
                         width: 100%
-                        white-space: nowrap
+                        height: 126px
                         overflow: hidden
-                        .rwd_marquee-track
+                        position: relative
+                        .marquee-track
                             display: flex
-                            animation-timing-function: linear
-                            animation-iteration-count: infinite
-                            width: 300vw
+                            position: absolute
+                            top: 0
+                            left: 0
                             .marquee-item
-                                flex: 0 0 auto
-                                padding: 0 5px
+                                flex-shrink: 0
+                                padding-right: 10px
                                 img
-                                    height: 70px
-                                    width: auto
-                                    display: block
+                                    height: 120px
+                                    width: 200px
+                                    object-fit: cover
+                                    flex-shrink: 0
+                        .scroll-left
+                            animation: scroll-left linear infinite
+                        .scroll-right
+                            animation: scroll-left reverse linear infinite
+                        &:hover
+                            .marquee-track
+                                animation-play-state: paused
 
 @keyframes scroll-up
     0%
@@ -480,13 +487,7 @@ body
     0%
         transform: translateX(0)
     100%
-        transform: translateX(-66.666%)
-
-@keyframes scroll-right
-    0%
-        transform: translateX(-66.666%)
-    100%
-        transform: translateX(0)
+        transform: translateX(-50%)
 
 @media screen and (max-width: 800px)
     .a7_games
@@ -545,24 +546,21 @@ body
         .feature_img
             position: relative
             .feature_img_content
-                margin: 0 auto
                 overflow: hidden
-                width: 100%
-                padding: 10px 0
-                ul
+                width: 100vw
+                #marqueeTrack
                     display: flex
+                    animation: marquee 120s linear infinite
                     width: max-content
-                    animation: scroll-marquee 20s linear infinite
-                    will-change: transform
-                    backface-visibility: hidden
-                    transform: translateZ(0)
-                    -webkit-transform: translateZ(0)
                     li
+                        flex: none
+                        width: 20vw
+                        list-style: none
                         text-align: center
+                        color: #fff
                         img
-                            width: auto
-                            object-fit: cover
-                            flex-shrink: 0
+                            font-size: 14px
+                            margin: 5px 0
                         p
                             font-size: 22px
                             font-weight: $title_font_weight
@@ -572,11 +570,12 @@ body
                             -webkit-background-clip: text
                             color: transparent
 
-@keyframes scroll-marquee
+@keyframes marquee
     0%
         transform: translateX(0)
+
     100%
-        transform: translateX(-33.333%)
+        transform: translateX(-50%)
 
 @media screen and (max-width: 800px)
     .feature
