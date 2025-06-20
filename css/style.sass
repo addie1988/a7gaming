@@ -1,0 +1,664 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+    display: block
+
+body
+    line-height: 1
+
+ol, ul
+    list-style: none
+
+blockquote, q
+    quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+    content: ''
+    content: none
+
+table
+    border-collapse: collapse
+    border-spacing: 0
+
+// -----------------------------------------------------    
+
+$max-width: 1500px
+$flex_width: 50%
+$main_color: linear-gradient(180deg, #FFEE53, #FF9D17)
+$_color: #fff
+$main_color_span: #000
+$title_color: #7A6FFF
+$title_font_size: 34px
+$title_font_weight: 900
+$p_font_size: 16px
+
+%display_flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+// -----------------------------------------------------    
+
+html
+    scroll-behavior: smooth
+
+body
+    background-color: #000
+
+.header_div
+    position: relative
+    .header_div_content
+        margin: 0 auto
+        @extend %display_flex
+.spacer
+    height: 0
+    transition: height 0.3s ease
+    &:active
+        height: 80px
+.header
+    position: absolute
+    width: $max-width
+    height: 70px
+    z-index: 3
+    @extend %display_flex
+    top: 28px
+    border-radius: 6px
+    .header_content
+        width: $max-width
+        padding-left: 10px
+        padding-right: 10px
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin: 0 auto
+        .logo
+            width: 30%
+            .logo_content
+                a
+                    display: inline-block
+                    img
+        .menu_language
+            width: 70%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .menu_language_content
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                .hamburger
+                    font-size: 1.5em
+                    cursor: pointer
+                    display: none
+                    user-select: none
+                .menu
+                    width: 70%
+                .nav-menu
+                    display: flex
+                    .menu_content
+                        margin: 0 auto
+                        width: 100%
+                        ul
+                            display: flex
+                            justify-content: space-between
+                            flex-wrap: wrap
+                            li
+                                a
+                                    font-size: 13px
+                                    color: #fff
+                                    text-decoration: none
+                                    transition: all 0.8s ease
+                                    margin: 0 20px
+                                    &:hover
+                                        color: #000
+                .show
+                    display: block
+                .language
+                    width: 20%
+                    position: relative
+                    display: flex
+                    justify-content: flex-end
+                    margin-left: 20px
+                    .language_content
+                        display: flex
+                        justify-content: flex-end
+                        .dropdown-toggle
+                            font-size: 16px
+                            cursor: pointer
+                            width: 29px
+                            height: 29px
+                    .dropdown-content
+                        display: none
+                        position: absolute
+                        top: 36px
+                        right: 0
+                        background: $main_color
+                        min-width: 160px
+                        box-shadow: 0px 8px 16px rgba(0,0,0,0.2)
+                        z-index: 3
+                        span
+                            color: black
+                            padding: 21px 16px
+                            text-decoration: none
+                            display: flex
+                            align-items: center
+                            border-bottom: 2px solid #fff
+                            &:nth-child(4)
+                                border-bottom: none
+                            &:hover
+                                p
+                                    transform: scale(1.5)
+                            img
+                            p
+                                color: #000000
+                                margin-left: 22px
+                                font-size: 12px
+                                transition: font-size 4s ease-in-out
+                                transition: all 0.4s ease-out
+                    .show
+                        display: block
+.fixed
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 2
+    width: 100%
+    background: rgba(0, 0, 0, 0.6)
+    backdrop-filter: blur(10px)
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+    transition: all 0.2s ease-in-out
+    &.hidden
+        display: none
+    .header_content
+        .menu_language
+            .menu_language_content
+                .menu
+                    .menu_content
+                        ul
+                            li
+                                a
+                                    color: #fff
+.banner
+    position: relative
+    z-index: -2
+    width: 100%
+    max-width: 1920px
+    height: 700px
+    margin-left: auto
+    margin-right: auto
+    overflow: hidden
+    .banner_content
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        overflow: hidden
+        position: relative
+        .banner_img
+            position: relative
+            display: flex
+            align-items: end
+            .banner_img_content
+                margin: 0 auto
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+@media screen and (max-width: 770px)
+    .header
+        width: 100%
+        .header_content
+            .logo
+            .menu_language
+                .menu_language_content
+                    .hamburger
+                        display: block
+                        color: #ffffff
+                    .menu
+                    .nav-menu
+                        display: none
+                        flex-direction: column
+                        background-color: #444
+                        position: absolute
+                        top: 100%
+                        left: 0
+                        width: 100%
+                        .menu_content
+                            width: 100%
+                            ul
+                                width: 100%
+                                line-height: 4
+                                li
+                                    border-bottom: 2px solid #fff
+                                    width: 100%
+                                    &:nth-child(4)
+                                        border-bottom: none
+                                    a
+                                        width: 100%
+                                        display: inline-block
+                    .show
+                        display: flex
+                        z-index: 3
+                        background: $main_color
+                        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+                        .menu_content
+                            ul
+                                li
+                                    a
+                                        color: #000000
+
+@media screen and (max-width: 1690px)
+    .header
+        width: 100%
+        margin: 0 auto
+    .banner
+        height: 100%
+        .banner_content
+            .banner_img
+                position: relative
+                width: 100%
+                .banner_img_content
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    z-index: -1
+                    img
+
+@media screen and (max-width: 1400px)
+    .header_div
+        .header_div_content
+            .header
+                .header_content
+                    .logo
+                    .menu_language
+            .banner
+                .banner_content
+                    .banner_img
+
+@media screen and (max-width: 1690px)
+    .header_div
+        .header_div_content
+            .header
+            .banner
+                height: 300px
+                background: url(../images/banner.jpg)
+                background-size: cover
+                background-position-x: center
+                background-position-y: center
+                .banner_content
+                    height: 100%
+                    .banner_img
+                        .banner_img_content
+                            display: none
+
+// -----------------------------------------------------------------------------------------    
+
+    // a7_games
+.a7_games
+    position: relative
+    background: url(../images/a7_games.png) no-repeat
+    background-size: cover
+    .a7_games_content
+        margin: 0 auto
+        width: 100%
+        max-width: $max-width
+        .a7_games_content_title
+            position: relative
+            padding: 74px 0
+            width: 50%
+            margin: 0 auto
+            .a7_games_content_title_content
+                margin: 0 auto
+                text-align: center
+                h1
+                    font-size: $title_font_size
+                    font-weight: $title_font_weight
+                    background: linear-gradient(to top, #FF9D17, #FFEE53)
+                    background: -webkit-linear-gradient(to top, #FF9D17, #FFEE53)
+                    background-clip: text
+                    -webkit-background-clip: text
+                    color: transparent
+                p
+                    color: #fff
+                    font-size: $p_font_size
+                    line-height: 2.5
+                    margin: 50px 0
+                a
+                    position: relative
+                    z-index: 0
+                    border-radius: 48px
+                    font-size: 1rem
+                    text-align: center
+                    text-decoration: none
+                    overflow: hidden
+                    transition: 0.2s transform ease-in-out
+                    will-change: transform
+                    width: 150px
+                    height: 40px
+                    display: inline-block
+                    margin: 0 auto
+                    background: $main_color
+                    .a7_games_a
+                        @extend %display_flex
+                        p
+                            color: #000
+                            margin: 0 auto
+                    &::before
+                        content: ''
+                        display: block
+                        position: absolute
+                        height: 100%
+                        width: 100%
+                        left: 0
+                        top: 0
+                        z-index: -1
+                        background-color: rgba(255, 255, 255, 0.8)
+                        border-radius: 3rem
+                        transform: translate(-100%, 0) rotate(10deg)
+                        transform-origin: top left
+                        transition: 0.3s transform ease-out
+                        will-change: transform
+                    &:hover
+                        border: 2px solid transparent
+                        color: #FFFFFF
+                        transform: scale(1.05)
+                        will-change: transform
+                        &::before
+                            transform: translate(0, 0)
+
+        .a7_games_img
+            position: relative
+            .a7_games_img_content
+                margin: 0 auto
+                ul
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-wrap: wrap
+                    gap: 20px
+                    li
+                        width: 25%
+                        a
+                            img
+                                width: 100%
+                                opacity: .8
+                                transition: 0.2s ease-in-out
+                            &:hover
+                                img
+                                    opacity: 1
+                                    border-radius: 30px
+
+@media screen and (max-width: 800px)
+    .a7_games
+        .a7_games_content
+            .a7_games_content_title
+                width: 90%
+                .a7_games_content_title_content
+                    a
+            .a7_games_img
+                .a7_games_img_content
+                    ul
+                        li
+                            width: 40%
+
+// -----------------------------------------------------------------------------------------      
+
+// feature
+.feature
+    position: relative
+    background: url(../images/feature.png) no-repeat
+    background-size: cover
+    background-position-x: center
+    background-position-y: center
+    .feature_content
+        margin: 0 auto
+        padding: 74px 0
+        .feature_content_title
+            position: relative
+            width: 50%
+            margin: 0 auto
+            .feature_content_title_content
+                margin: 0 auto
+                text-align: center
+                h1
+                    font-size: $title_font_size
+                    font-weight: $title_font_weight
+                    background: linear-gradient(to top, #FF9D17, #FFEE53)
+                    background: -webkit-linear-gradient(to top, #FF9D17, #FFEE53)
+                    background-clip: text
+                    -webkit-background-clip: text
+                    color: transparent
+                p
+                    color: #fff
+                    font-size: $p_font_size
+                    line-height: 2.5
+                    margin: 50px 0
+        .feature_img
+            position: relative
+            .feature_img_content
+                margin: 0 auto
+                overflow: hidden
+                width: 100%
+                padding: 10px 0
+                ul
+                    display: flex
+                    width: max-content
+                    animation: scroll-marquee 20s linear infinite
+                    will-change: transform
+                    backface-visibility: hidden
+                    transform: translateZ(0)
+                    -webkit-transform: translateZ(0)
+                    li
+                        text-align: center
+                        img
+                            width: auto
+                            object-fit: cover
+                            flex-shrink: 0
+                        p
+                            font-size: 22px
+                            font-weight: $title_font_weight
+                            background: linear-gradient(to top, #FF9D17, #FFEE53)
+                            background: -webkit-linear-gradient(to top, #FF9D17, #FFEE53)
+                            background-clip: text
+                            -webkit-background-clip: text
+                            color: transparent
+
+@keyframes scroll-marquee
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-33.333%)
+
+@media screen and (max-width: 800px)
+    .feature
+        .feature_content
+            .feature_content_title
+                width: 90%
+            .feature_img
+                .feature_img_content
+                    ul
+                        animation-duration: 20s
+
+// -----------------------------------------------------------------------------------------                                
+
+.footer
+    border-top: 2px solid #fff
+    .footer_content
+        margin: 0 auto
+        width: $max-width
+        .footer_logo_content_text
+            position: relative
+            margin-top: 60px
+            .footer_logo_content_text_content
+                margin: 0 auto
+                text-align: center
+                p
+                    font-size: 16px
+                    color: #fff
+        .footer_text
+            position: relative
+            padding-top: 30px
+            .footer_text_content
+                margin: 0 auto
+                ul
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: center
+                    li
+                        width: 50%
+                        margin: 20px 0
+                        a
+                            text-decoration: none
+                        .contact_details
+                            position: relative
+                            .contact_details_content
+                                margin: 0 auto
+                                display: flex
+                                align-items: center
+                                .contact_details_img
+                                    position: relative
+                                    width: 20%
+                                    .contact_details_img_content
+                                        margin: 0 auto
+                                        @extend %display_flex
+                                .contact_details_text
+                                    position: relative
+                                    width: 80%
+                                    .contact_details_text_content
+                                        margin: 0 auto
+                                        text-align: left
+                                        span
+                                            font-weight: $title_font_weight
+                                            background: linear-gradient(to top, #FF9D17, #FFEE53)
+                                            background: -webkit-linear-gradient(to top, #FF9D17, #FFEE53)
+                                            background-clip: text
+                                            -webkit-background-clip: text
+                                            color: transparent
+                                        p
+                                            font-size: 14px
+                                            color: #fff
+                                            margin-top: 10px
+                                            line-height: 1.5
+        .copyright
+            position: relative
+            padding: 10px 0
+            .copyright_content
+                margin: 0 auto
+                text-align: center
+                p
+                    width: 80%
+                    margin: 0 auto
+                    line-height: 1.5
+                    color: #fff
+                    font-size: 12px
+                    padding: 10px 0
+@media screen and (max-width: 1192px)
+    .footer
+        .footer_content
+            width: 100%
+            .footer_logo_content_text
+                width: 90%
+            .footer_text
+                .footer_text_content
+                    ul
+                        li
+                            width: 100%
+            .copyright
+                .copyright_content
+                    p
+
+// -----------------------------------------------------------------------------------------    
+
+.float
+    position: fixed
+    right: 0
+    bottom: 4%
+    z-index: 2
+    .float_content
+        margin: 0 auto
+        background: $main_color
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+        width: 85px
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+        ul
+            padding: 0.5px
+            li
+                margin: 20px 0
+                a
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    text-decoration: none
+                    img
+                    p
+                        font-size: 11px
+                        color: #000000
+                        margin-top: 20px
+                        text-align: center
+                        line-height: 1.8
+            span
+                border-bottom: 2px solid #ffffff
+                width: 60%
+                display: block
+                margin: 0 auto
+
+.float_rwd
+    position: relative
+    display: none
+    .float_rwd_content
+        margin: 0 auto
+        ul
+            li
+                width: 60px
+                height: 60px
+                margin: 20px 0
+                background: $main_color
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                align-items: center
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+                a
+                    text-decoration: none
+                    padding: 10px
+                    img
+                        width: 30px
+
+@media screen and (max-width: 500px)
+    .float
+        display: none
+    .float_rwd
+        position: fixed
+        right: 10px
+        bottom: 100px
+        display: block
+        z-index: 2
+        .float_rwd_content
+            ul
+                li

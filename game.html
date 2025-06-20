@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./images/main_logo.png" />
+    <title>a7gaming|游戏介绍</title>
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="header_div">
+        <div class="header_div_content">
+
+
+            <div class="spacer" id="spacer"></div>
+            <div class="header" id="header">
+                <div class="header_content">
+                    <div class="logo">
+                        <div class="logo_content">
+                            <a href="./index.html">
+                                <img src="./images/main_logo.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menu_language">
+                        <div class="menu_language_content">
+                            <div class="hamburger" id="hamburger">☰</div>
+                            <div class="menu nav-menu" id="nav-menu">
+                                <div class="menu_content">
+                                    <ul>
+                                        <li><a href="./index.html" target="_blank" data-i18n="home">首页</a></li>
+                                        <li><a class="scroll-link" href="#games" data-i18n="games">游戏介绍</a></li>
+                                        <li><a class="scroll-link" href="#contact_us" data-i18n="contact_us">联系我们</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="language">
+                                <div class="language_content">
+                                    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+                                        <img id="languageIcon" src="./images/icon_1.svg" alt="简体中文">
+                                    </a>
+                                    <div id="dropdownMenu" class="dropdown-content">
+                                        <span onclick="changeLanguage('zh-CN')">
+                                            <img src="./images/icon_1.svg" alt="简体中文">
+                                            <p>简体中文</p>
+                                        </span>
+                                        <span onclick="changeLanguage('en')">
+                                            <img src="./images/icon_2.svg" alt="English">
+                                            <p>English</p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- banner -->
+            <div class="banner">
+                <div class="banner_content">
+                    <div class="banner_img">
+                        <div class="banner_img_content">
+                            <img src="./images/banner.jpg" alt="Banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <!-- All Games -->
+    <div class="all_games">
+        <div class="all_games_content">
+            <div class="all_games_title">
+                <div class="all_games_title_content">
+                    <h1 data-i18n="all_games">所有游戏</h1>
+                </div>
+            </div>
+            <div class="all_games_img">
+                <div class="all_games_img_content">
+                    <ul id="games">
+                        <li>
+                            <img src="./images/games/game_1.jpg" alt="厄夜惊魂">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_1.png" alt="厄夜惊魂">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_1_name">厄夜惊魂</h1>
+                                            <p data-i18n="game_1_desc">女巫、吸血鬼、狼人，闇夜的游行开始了，准备好了吗？</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_2.jpg" alt="大老二">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_2.png" alt="大老二">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_2_name">大老二</h1>
+                                            <p data-i18n="game_2_desc">易上手、快节奏、赔付金额加倍，一把爽翻天！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_3.jpg" alt="歡樂捕魚">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_3.png" alt="歡樂捕魚">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_3_name">歡樂捕魚</h1>
+                                            <p data-i18n="game_3_desc">地表最强的捕鱼游戏！让人欲罢不能的多人同屏竞技游戏。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_4.jpg" alt="十三支">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_4.png" alt="十三支">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_4_name">十三支</h1>
+                                            <p data-i18n="game_4_desc">玩法简单，轻松上手。自由组合，比拚大小定输赢。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_5.jpg" alt="水果盘">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_5.png" alt="水果盘">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_5_name">水果盘</h1>
+                                            <p data-i18n="game_5_desc">享受水果转轮的刺激快感，体验翻本百倍的双重感受。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_6.jpg" alt="金蟾报喜">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_6.png" alt="金蟾报喜">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_6_name">金蟾报喜</h1>
+                                            <p data-i18n="game_6_desc">中式古典风格力作，飞黄腾达，官运亨通，金蟾闪闪归来。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_7.jpg" alt="希腊神话">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_7.png" alt="希腊神话">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_7_name">希腊神话</h1>
+                                            <p data-i18n="game_7_desc">希腊众神堂堂降临！现在就踏上桂冠之路，沐浴在众神的祝福之中吧！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_8.jpg" alt="幸运777">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_8.png" alt="幸运777">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_8_name">幸运777</h1>
+                                            <p data-i18n="game_8_desc">经典电子老虎机元素以及玩法，为您带来更多乐趣。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_9.jpg" alt="财神到">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_9.png" alt="财神到">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_9_name">财神到</h1>
+                                            <p data-i18n="game_9_desc">沉浸在浓浓的福气欢快气氛中，享受福跃新程、似锦前程的好运!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_10.jpg" alt="聚宝盆">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_10.png" alt="聚宝盆">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_10_name">聚宝盆</h1>
+                                            <p data-i18n="game_10_desc">招財轉運，水晶發財樹，下注越多，获胜机率越高，奖金满满。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_11.jpg" alt="斗地主">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_11.png" alt="斗地主">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_11_name">斗地主</h1>
+                                            <p data-i18n="game_11_desc">经典扑克游戏，集休闲娱乐和竞技于一体，规则简单老少皆宜。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_12.jpg" alt="水浒传">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_12.png" alt="水浒传">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_12_name">水浒传</h1>
+                                            <p data-i18n="game_12_desc">經典街機老虎機，超高倍全盤大獎等你來挑戰!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_13.jpg" alt="冰球突破">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_13.png" alt="冰球突破">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_13_name">冰球突破</h1>
+                                            <p data-i18n="game_13_desc">得分連爆再連爆，爽感爆發的節奏帶給你無限營分刺激!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_14.jpg" alt="奔驰宝马">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_14.png" alt="奔驰宝马">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_14_name">奔驰宝马</h1>
+                                            <p data-i18n="game_14_desc">街機經典爆款，保證開獎，保證刺激，天選之人必須挑戰!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_15.jpg" alt="超级水果机">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_15.png" alt="超级水果机">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_15_name">超级水果机</h1>
+                                            <p data-i18n="game_15_desc">老虎機熱門機台再現，玩法與規則簡單直接，包你一試成主顧!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_16.jpg" alt="连环夺宝">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_16.png" alt="连环夺宝">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_16_name">连环夺宝</h1>
+                                            <p data-i18n="game_16_desc">連爆消除營彩金，過關贏分彩金都升級，連過三關再挑戰最終龍珠大獎!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_17.jpg" alt="飞禽走兽">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_17.png" alt="飞禽走兽">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_17_name">飞禽走兽</h1>
+                                            <p data-i18n="game_17_desc">动物们正在举办狂欢派对，立即加入吧！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_18.jpg" alt="百人牛牛">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_18.png" alt="百人牛牛">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_18_name">百人牛牛</h1>
+                                            <p data-i18n="game_18_desc">节奏明快刺激，最高单局即可赢得高倍金额！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_19.jpg" alt="红黑大战">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_19.png" alt="红黑大战">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_19_name">红黑大战</h1>
+                                            <p data-i18n="game_19_desc">看看黑王和红后的斗争，下好离手！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_20.jpg" alt="百家乐">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_20.png" alt="百家乐">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_20_name">百家乐</h1>
+                                            <p data-i18n="game_20_desc">好汉何必单恋一支花，当然是能下注的我全都要下！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_21.jpg" alt="炸金花">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_21.png" alt="炸金花">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_21_name">炸金花</h1>
+                                            <p data-i18n="game_21_desc">大牌跟注，小牌弃牌，这是一场勇气与智慧的较量！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_22.jpg" alt="龙虎斗">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_22.png" alt="龙虎斗">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_22_name">龙虎斗</h1>
+                                            <p data-i18n="game_22_desc">游戏玩法简单易懂，游戏节奏明快，一张决胜负！</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/games/game_23.jpg" alt="抢庄牛牛">
+                            <div class="all_games_list_box">
+                                <div class="all_games_list_box_content">
+                                    <div class="all_games_list_box_img">
+                                        <div class="all_games_list_box_img_content">
+                                            <img src="./images/games_min/games_min_23.png" alt="抢庄牛牛">
+                                        </div>
+                                    </div>
+                                    <div class="all_games_list_box_text">
+                                        <div class="all_games_list_box_text_content">
+                                            <h1 data-i18n="game_23_name">抢庄牛牛</h1>
+                                            <p data-i18n="game_23_desc">斗牛简单却又非常有意思，游戏速度极快，刺激而又惊险。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <div class="footer">
+        <div class="footer_content">
+            <div class="footer_text">
+                <div class="footer_text_content">
+                    <ul>
+                        <li>
+                            <a href="https://t.me/Antplay_BD" target="_blank">
+                                <div class="contact_details">
+                                    <div class="contact_details_content">
+                                        <div class="contact_details_img">
+                                            <div class="contact_details_img_content">
+                                                <img src="./images/Component 10.png" alt="icon">
+                                            </div>
+                                        </div>
+                                        <div class="contact_details_text">
+                                            <div class="contact_details_text_content" id="contact_us">
+                                                <span data-i18n="contact">Contact Us</span>
+                                                <p data-i18n="registration">Registration number: 160629 (0)</p>
+                                                <p data-i18n="address">Address: Zuikertuintjeweg Z/N (Zuikertuin
+                                                    Tower), Curaçao.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="copyright_content">
+                    <p data-i18n="copyright">Copyright © 2025 A7 Gaming. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- -->
+
+    <div class="float">
+        <div class="float_content">
+            <ul>
+                <li><a href="https://t.me/Antplay_BD" target="_blank">
+                        <img src="./images/telegram 1.svg" alt="icon">
+                        <p>@Antplay_BD</p>
+                    </a></li>
+                <span></span>
+                <li><a href="https://api.whatsapp.com/send/?phone=%2B18458660888&text&type=phone_number&app_absent=0"
+                        target="_blank">
+                        <img src="./images/whatsapp 1.svg" alt="icon">
+                        <p>+1 (845) 866-0888</p>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="float_rwd">
+        <div class="float_rwd_content">
+            <ul>
+                <li>
+                    <a href="https://t.me/Antplay_BD" target="_blank">
+                        <img src="./images/telegram 1.svg" alt="icon">
+                    </a>
+                </li>
+                <li><a href="https://api.whatsapp.com/send/?phone=%2B18458660888&text&type=phone_number&app_absent=0"
+                        target="_blank">
+                        <img src="./images/whatsapp 1.svg" alt="icon">
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="./js/game.js"></script>
+</body>
+
+</html>
