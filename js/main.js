@@ -360,7 +360,7 @@ for (let i = 0; i < 10; i++) {
   const track = document.createElement('div');
   track.className = 'rwd_marquee-track';
   track.style.animationName = i % 2 === 0 ? 'scroll-left' : 'scroll-right';
-  track.style.animationDuration = `${30 + i * 3}s`;
+  track.style.animationDuration = `${60 + i * 5}s`;
 
   // 圖片內容放三份，確保無縫循環
   for (let j = 0; j < 3; j++) {

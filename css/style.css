@@ -539,17 +539,19 @@ body {
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .rwd_marquee-container .rwd_marquee-row {
   width: 100%;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .rwd_marquee-container .rwd_marquee-row .rwd_marquee-track {
   display: flex;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  width: 300vw;
 }
 
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .rwd_marquee-container .rwd_marquee-row .rwd_marquee-track .marquee-item {
   flex: 0 0 auto;
-  padding: 0 0;
+  padding: 0 5px;
 }
 
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .rwd_marquee-container .rwd_marquee-row .rwd_marquee-track .marquee-item img {
@@ -572,7 +574,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-33.333%);
+    transform: translateX(-66.666%);
   }
 }
 
@@ -581,7 +583,7 @@ body {
     transform: translateX(-66.666%);
   }
   100% {
-    transform: translateX(-33.333%);
+    transform: translateX(0);
   }
 }
 

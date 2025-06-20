@@ -456,13 +456,15 @@ body
                     .rwd_marquee-row
                         width: 100%
                         white-space: nowrap
+                        overflow: hidden
                         .rwd_marquee-track
                             display: flex
                             animation-timing-function: linear
                             animation-iteration-count: infinite
+                            width: 300vw
                             .marquee-item
                                 flex: 0 0 auto
-                                padding: 0 0
+                                padding: 0 5px
                                 img
                                     height: 70px
                                     width: auto
@@ -478,13 +480,13 @@ body
     0%
         transform: translateX(0)
     100%
-        transform: translateX(-33.333%)
+        transform: translateX(-66.666%)
 
 @keyframes scroll-right
     0%
         transform: translateX(-66.666%)
     100%
-        transform: translateX(-33.333%)
+        transform: translateX(0)
 
 @media screen and (max-width: 800px)
     .a7_games
