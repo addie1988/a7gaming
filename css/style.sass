@@ -335,7 +335,6 @@ body
     .a7_games_content
         margin: 0 auto
         width: 100%
-        max-width: $max-width
         .a7_games_content_title
             position: relative
             padding: 74px 0
@@ -404,23 +403,88 @@ body
             position: relative
             .a7_games_img_content
                 margin: 0 auto
-                ul
+                .marquee-container
+                    margin: 20px auto
                     display: flex
-                    align-items: center
-                    justify-content: center
-                    flex-wrap: wrap
-                    gap: 20px
-                    li
-                        width: 25%
-                        a
+                    .marquee-row
+                        position: relative
+                        overflow: hidden
+                        width: 40%
+                        height: 700px; /* 顯示區高度 */
+                        border: 1px solid #333
+                        .marquee-track
+                            display: flex
+                            flex-direction: column
+                            position: absolute
+                            top: 0
+                            left: 0
+                            width: 100%
+                            animation: scroll-up 260s linear infinite
                             img
-                                width: 100%
-                                opacity: .8
-                                transition: 0.2s ease-in-out
-                            &:hover
+                                width: auto
+                                margin: 5px
+                                user-select: none
+                                pointer-events: none
+                                border-radius: 10px
+                                border-width: 2px
+                                border-style: solid
+                                border-color: transparent
+                                background-image: linear-gradient(white, white), linear-gradient(to bottom, #FFEE53, #FF9D17)
+                                background-clip: padding-box, border-box
+                                background-origin: padding-box, border-box
+                        .reverse
+                            animation-direction: reverse
+                            img
+                                width: auto
+                                margin: 5px
+                                user-select: none
+                                pointer-events: none
+                                border-radius: 10px
+                                border-width: 2px
+                                border-style: solid
+                                border-color: transparent
+                                background-image: linear-gradient(white, white), linear-gradient(to bottom, #FFEE53, #FF9D17)
+                                background-clip: padding-box, border-box
+                                background-origin: padding-box, border-box
+                .rwd_marquee-container
+                    display: none
+                    flex-direction: column
+                    gap: 8px
+                    overflow: hidden
+                    width: 100%
+                    padding: 10px 0
+                    .rwd_marquee-row
+                        width: 100%
+                        white-space: nowrap
+                        .rwd_marquee-track
+                            display: flex
+                            animation-timing-function: linear
+                            animation-iteration-count: infinite
+                            .marquee-item
+                                flex: 0 0 auto
+                                padding: 0 4px
                                 img
-                                    opacity: 1
-                                    border-radius: 30px
+                                    height: 70px
+                                    width: auto
+                                    display: block
+
+@keyframes scroll-up
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(-50%)
+
+@keyframes scroll-left
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-50%)
+
+@keyframes scroll-right
+    0%
+        transform: translateX(-50%)
+    100%
+        transform: translateX(0)
 
 @media screen and (max-width: 800px)
     .a7_games
@@ -428,12 +492,21 @@ body
             .a7_games_content_title
                 width: 90%
                 .a7_games_content_title_content
-                    a
             .a7_games_img
                 .a7_games_img_content
-                    ul
-                        li
-                            width: 40%
+                    .marquee-container
+                        display: none
+                    .marquee-row
+                        .marquee-track
+                        .reverse
+                            img
+                    .rwd_marquee-container
+                        display: block
+                        overflow: hidden
+                        .rwd_marquee-row
+                            width: 100%
+                            .rwd_marquee-track
+                                width: 100%
 
 // -----------------------------------------------------------------------------------------      
 

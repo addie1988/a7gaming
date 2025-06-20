@@ -45,39 +45,49 @@ $p_font_size: 16px
                     color: transparent
         .all_games_img
             position: relative
+            margin-bottom: 50px
             .all_games_img_content
                 margin: 0 auto
                 ul
                     display: flex
-                    align-items: center
+                    align-items: flex-start
                     justify-content: center
                     flex-wrap: wrap
                     gap: 20px
                     li
                         width: 22%
-                        border-radius: 16px
                         overflow: hidden
                         position: relative
-                        img
-                            width: 100%
-                            height: 100%
-                            object-fit: cover
+                        border-width: 2px
+                        border-style: solid
+                        border-color: transparent
+                        background-image: linear-gradient(white, white), linear-gradient(to bottom, #FFEE53, #FF9D17)
+                        background-clip: padding-box, border-box
+                        background-origin: padding-box, border-box
+                        border-radius: 16px
+                        .all_games_box
+                            position: relative
+                            .all_games_box_content
+                                margin: 0 auto
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    border-top-left-radius: 16px
+                                    border-top-right-radius: 16px
+                                    object-fit: cover
                         .all_games_list_box
-                            position: absolute
-                            bottom: 0
-                            left: 0
-                            width: 100%
-                            height: 50%
-                            background: rgba(0, 0, 0, 0.7)
-                            z-index: 1
+                            position: relative
                             display: flex
                             align-items: flex-start
                             justify-content: center
                             .all_games_list_box_content
-                                margin: 0 10px
+                                padding: 20px
                                 display: flex
                                 align-items: flex-start
                                 justify-content: center
+                                background: #000
+                                border-bottom-left-radius: 16px
+                                border-bottom-right-radius: 16px
                                 .all_games_list_box_img
                                     position: relative
                                     width: 20%
@@ -93,7 +103,7 @@ $p_font_size: 16px
                                     .all_games_list_box_text_content
                                         margin: 0 auto
                                         h1
-                                            font-size: 16px
+                                            font-size: 22px
                                             font-weight: $title_font_weight
                                             background: linear-gradient(to top, #FF9D17, #FFEE53)
                                             background: -webkit-linear-gradient(to top, #FF9D17, #FFEE53)
@@ -101,7 +111,7 @@ $p_font_size: 16px
                                             -webkit-background-clip: text
                                             color: transparent
                                         p
-                                            font-size: 12px
+                                            font-size: 16px
                                             color: #fff
                                             line-height: 1.5
 

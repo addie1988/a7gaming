@@ -56,20 +56,20 @@ document.querySelectorAll('.scroll-link').forEach(link => {
   link.addEventListener('click', (e) => {
     try {
       e.preventDefault(); // 防止立即跳轉
-      
+
       const targetId = link.getAttribute('href');
       const targetElement = document.querySelector(targetId);
-      
+
       if (targetElement) {
         // 可自訂：GA 追蹤、動畫、console log 等
         console.log(`前往 ${targetId}`);
-        
+
         // 關閉導覽選單
         const navMenu = document.getElementById('nav-menu');
         if (navMenu) {
           navMenu.classList.remove('show');
         }
-        
+
         // 延遲 300 毫秒後滾動
         setTimeout(() => {
           targetElement.scrollIntoView({
@@ -253,12 +253,12 @@ if (track) {
     // 複製兩次內容以確保無縫接軌
     const originalContent = track.innerHTML;
     track.innerHTML = originalContent + originalContent + originalContent;
-    
+
     // 計算動畫持續時間，確保平滑滾動
     const trackWidth = track.scrollWidth;
     const containerWidth = track.parentElement.offsetWidth;
     const duration = (trackWidth / 3) * 0.05; // 根據內容長度調整速度
-    
+
     // 動態設置動畫持續時間
     track.style.animationDuration = `${duration}s`;
   } catch (error) {
@@ -266,4 +266,162 @@ if (track) {
   }
 }
 
+// ----------------------------------------------------------------------------------------
+
+// 交錯跑馬燈
+const imageUrls = [
+  './images/games/game_1.jpg',
+  './images/games/game_2.jpg',
+  './images/games/game_3.jpg',
+  './images/games/game_4.jpg',
+  './images/games/game_5.jpg',
+  './images/games/game_6.jpg',
+  './images/games/game_7.jpg',
+  './images/games/game_8.jpg',
+  './images/games/game_9.jpg',
+  './images/games/game_10.jpg',
+  './images/games/game_11.jpg',
+  './images/games/game_12.jpg',
+  './images/games/game_13.jpg',
+  './images/games/game_14.jpg',
+  './images/games/game_15.jpg',
+  './images/games/game_16.jpg',
+  './images/games/game_17.jpg',
+  './images/games/game_18.jpg',
+  './images/games/game_19.jpg',
+  './images/games/game_20.jpg',
+  './images/games/game_21.jpg',
+  './images/games/game_22.jpg',
+  './images/games/game_23.jpg',
+];
+
+const container = document.getElementById('container');
+
+for(let i = 0; i < 10; i++) {
+  const row = document.createElement('div');
+  row.className = 'marquee-row';
+
+  const track = document.createElement('div');
+  track.className = 'marquee-track';
+
+  // 偶數行正常播放，奇數行反向播放達到上下交錯效果
+  if(i % 2 === 1) {
+    track.classList.add('reverse');
+  }
+
+  // 複製兩遍圖片確保無縫接軌
+  for(let j = 0; j < 2; j++) {
+    imageUrls.forEach(url => {
+      const img = document.createElement('img');
+      img.src = url;
+      track.appendChild(img);
+    });
+  }
+
+  row.appendChild(track);
+  container.appendChild(row);
+}
+
+// ----------------------------------------------------------------------------------------
+
+// RWD交錯跑馬燈
+const imageUrls_rwd = [
+  './images/games_min/games_min_1.png',
+  './images/games_min/games_min_2.png',
+  './images/games_min/games_min_3.png',
+  './images/games_min/games_min_4.png',
+  './images/games_min/games_min_5.png',
+  './images/games_min/games_min_6.png',
+  './images/games_min/games_min_7.png',
+  './images/games_min/games_min_8.png',
+  './images/games_min/games_min_9.png',
+  './images/games_min/games_min_10.png',
+  './images/games_min/games_min_11.png',
+  './images/games_min/games_min_12.png',
+  './images/games_min/games_min_13.png',
+  './images/games_min/games_min_14.png',
+  './images/games_min/games_min_15.png',
+  './images/games_min/games_min_16.png',
+  './images/games_min/games_min_17.png',
+  './images/games_min/games_min_18.png',
+  './images/games_min/games_min_19.png',
+  './images/games_min/games_min_20.png',
+  './images/games_min/games_min_21.png',
+  './images/games_min/games_min_22.png',
+  './images/games_min/games_min_23.png',
+  './images/games_min/games_min_1.png',
+  './images/games_min/games_min_2.png',
+  './images/games_min/games_min_3.png',
+  './images/games_min/games_min_4.png',
+  './images/games_min/games_min_5.png',
+  './images/games_min/games_min_6.png',
+  './images/games_min/games_min_7.png',
+  './images/games_min/games_min_8.png',
+  './images/games_min/games_min_9.png',
+  './images/games_min/games_min_10.png',
+  './images/games_min/games_min_11.png',
+  './images/games_min/games_min_12.png',
+  './images/games_min/games_min_13.png',
+  './images/games_min/games_min_14.png',
+  './images/games_min/games_min_15.png',
+  './images/games_min/games_min_16.png',
+  './images/games_min/games_min_17.png',
+  './images/games_min/games_min_18.png',
+  './images/games_min/games_min_19.png',
+  './images/games_min/games_min_20.png',
+  './images/games_min/games_min_21.png',
+  './images/games_min/games_min_22.png',
+  './images/games_min/games_min_23.png',
+  './images/games_min/games_min_1.png',
+  './images/games_min/games_min_2.png',
+  './images/games_min/games_min_3.png',
+  './images/games_min/games_min_4.png',
+  './images/games_min/games_min_5.png',
+  './images/games_min/games_min_6.png',
+  './images/games_min/games_min_7.png',
+  './images/games_min/games_min_8.png',
+  './images/games_min/games_min_9.png',
+  './images/games_min/games_min_10.png',
+  './images/games_min/games_min_11.png',
+  './images/games_min/games_min_12.png',
+  './images/games_min/games_min_13.png',
+  './images/games_min/games_min_14.png',
+  './images/games_min/games_min_15.png',
+  './images/games_min/games_min_16.png',
+  './images/games_min/games_min_17.png',
+  './images/games_min/games_min_18.png',
+  './images/games_min/games_min_19.png',
+  './images/games_min/games_min_20.png',
+  './images/games_min/games_min_21.png',
+  './images/games_min/games_min_22.png',
+  './images/games_min/games_min_23.png',
+];
+
+const rwd_container = document.getElementById('rwd_container');
+
+for (let i = 0; i < 10; i++) {
+  const row = document.createElement('div');
+  row.className = 'rwd_marquee-row';
+
+  const track = document.createElement('div');
+  track.className = 'rwd_marquee-track';
+  track.style.animationName = i % 2 === 0 ? 'scroll-left' : 'scroll-right';
+  track.style.animationDuration = `${30 + i * 3}s`;
+
+  // 圖片內容放兩份，實現無縫
+  for (let j = 0; j < 2; j++) {
+    imageUrls_rwd.forEach(url => {
+      const item = document.createElement('div');
+      item.className = 'marquee-item';
+      const img = document.createElement('img');
+      img.src = url;
+      img.loading = "lazy";
+      item.appendChild(img);
+      track.appendChild(item);
+    });
+  }
+
+  row.appendChild(track);
+  rwd_container.appendChild(row);
+}
 

@@ -82,7 +82,7 @@ const translations = {
         'a7_games_desc': 'As a member of mobile application gamification, we take pride in integrity and stability, providing the richest and most enjoyable gaming platform for players worldwide. A7 Gaming features diverse gaming experiences, stunning sound effects and impressive gorgeous animations.',
         'platform_features': 'A7 Platform Features',
         'platform_desc': 'At A7 Gaming, everyone can find something for themselves. Our team has developed games of various types and styles to cater to all types of players, ensuring a fun and varied gaming experience for everyone. Nearly 100 games most loved by Asian players, fair, just and open! Combined with the promotion system, themed gameplay attracts attention, players love it, and the stickiness is 100%!',
-        'beautiful_art': 'Beautiful Art',
+        'beautiful_art': 'Stunning Artwork',
         'diverse_games': 'Diverse Games',
         'high_rewards': 'High Rewards',
         'smart_bot': 'Smart Bot',
