@@ -943,7 +943,6 @@ body {
 .all_games {
   position: relative;
   background: url(../images/a7_games.png) no-repeat;
-  background-size: cover;
   background-size: contain;
 }
 
