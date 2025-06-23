@@ -306,29 +306,39 @@ const imageUrls = [
 
 const container = document.getElementById("container");
 
-for (let i = 0; i < 10; i++) {
-  const row = document.createElement("div");
-  row.className = "marquee-row";
+if (container) {
+  // 清空容器
+  container.innerHTML = '';
+  
+  for (let i = 0; i < 10; i++) {
+    const row = document.createElement("div");
+    row.className = "marquee-row";
 
-  const track = document.createElement("div");
-  track.className = "marquee-track";
+    const track = document.createElement("div");
+    track.className = "marquee-track";
 
-  // 偶數行正常播放，奇數行反向播放達到上下交錯效果
-  if (i % 2 === 1) {
-    track.classList.add("reverse");
+    // 偶數行正常播放，奇數行反向播放達到上下交錯效果
+    if (i % 2 === 1) {
+      track.classList.add("reverse");
+    }
+
+    // 增加複製次數確保無縫接軌 - 從5次增加到8次
+    // 這樣可以確保動畫循環時有足夠的內容填充
+    for (let j = 0; j < 8; j++) {
+      imageUrls.forEach((url) => {
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = `Game ${j + 1}`;
+        img.loading = "lazy"; // 優化載入性能
+        track.appendChild(img);
+      });
+    }
+
+    row.appendChild(track);
+    container.appendChild(row);
   }
-
-  // 複製三遍圖片確保無縫接軌
-  for (let j = 0; j < 3; j++) {
-    imageUrls.forEach((url) => {
-      const img = document.createElement("img");
-      img.src = url;
-      track.appendChild(img);
-    });
-  }
-
-  row.appendChild(track);
-  container.appendChild(row);
+} else {
+  console.warn("找不到 container 元素");
 }
 
 // ----------------------------------------------------------------------------------------
@@ -360,109 +370,122 @@ const imageGroups = [
     { length: imagesPerLine },
     (_, i) => `./images/games_min/games_min_${i + 1}.png`
   ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
-  Array.from(
-    { length: imagesPerLine },
-    (_, i) => `./images/games_min/games_min_${i + 1}.png`
-  ),
 ];
 
 const rwd_container = document.getElementById("marqueeContainer");
 
-for (let i = 0; i < numberOfLines; i++) {
-  const line = document.createElement("div");
-  line.className = "marquee-line";
+if (rwd_container) {
+  // 清空容器
+  rwd_container.innerHTML = '';
+  
+  for (let i = 0; i < numberOfLines; i++) {
+    const line = document.createElement("div");
+    line.className = "marquee-line";
 
-  const track = document.createElement("div");
-  track.className = "marquee-track";
-  track.classList.add(i % 2 === 0 ? "scroll-left" : "scroll-right");
+    const track = document.createElement("div");
+    track.className = "marquee-track";
+    track.classList.add(i % 2 === 0 ? "scroll-left" : "scroll-right");
 
-  const animationDuration = 20 + i * 4;
-  const animationDelay = -Math.floor(animationDuration / 2);
-  track.style.animationDuration = `${animationDuration}s`;
-  track.style.animationDelay = `${animationDelay}s`;
+    // 優化動畫時間，確保無縫接軌
+    const animationDuration = 20 + i * 4;
+    const animationDelay = -Math.floor(animationDuration / 2);
+    track.style.animationDuration = `${animationDuration}s`;
+    track.style.animationDelay = `${animationDelay}s`;
 
-  const urls = imageGroups[i % imageGroups.length];
+    const urls = imageGroups[i % imageGroups.length];
 
-  for (let k = 0; k < 2; k++) {
-    urls.forEach((url) => {
-      const img = document.createElement("img");
-      img.src = url;
-      track.appendChild(img);
+    // 增加複製次數確保無縫接軌 - 從4次增加到6次
+    for (let k = 0; k < 6; k++) {
+      urls.forEach((url) => {
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = `Game ${k + 1}`;
+        img.loading = "lazy"; // 優化載入性能
+        track.appendChild(img);
+      });
+    }
+
+    line.appendChild(track);
+    rwd_container.appendChild(line);
+  }
+} else {
+  console.warn("找不到 marqueeContainer 元素");
+}
+
+// ----------------------------------------------------------------------------------------
+
+// 動態控制跑馬燈速度
+function adjustMarqueeSpeed(speedMultiplier = 1) {
+  try {
+    // 控制桌面版跑馬燈速度
+    const desktopTracks = document.querySelectorAll('.marquee-container .marquee-track');
+    desktopTracks.forEach((track, index) => {
+      const baseDuration = 110; // 基礎動畫時間
+      const adjustedDuration = baseDuration / speedMultiplier;
+      track.style.animationDuration = `${adjustedDuration}s`;
+    });
+
+    // 控制 RWD 跑馬燈速度
+    const rwdTracks = document.querySelectorAll('.rwd_marquee-container .marquee-track');
+    rwdTracks.forEach((track, index) => {
+      const baseDuration = 20 + index * 4; // 基礎動畫時間
+      const adjustedDuration = baseDuration / speedMultiplier;
+      track.style.animationDuration = `${adjustedDuration}s`;
+    });
+
+    console.log(`跑馬燈速度已調整為 ${speedMultiplier}x`);
+  } catch (error) {
+    console.warn("調整跑馬燈速度時發生錯誤:", error);
+  }
+}
+
+// 優化無縫接軌 - 動態調整動畫
+function optimizeSeamlessLoop() {
+  try {
+    // 確保所有跑馬燈都有足夠的內容來實現無縫接軌
+    const allTracks = document.querySelectorAll('.marquee-track');
+    
+    allTracks.forEach((track) => {
+      // 設置動畫屬性以確保無縫循環
+      track.style.animationIterationCount = 'infinite';
+      track.style.animationTimingFunction = 'linear';
+      
+      // 確保動畫不會有間隙
+      track.style.willChange = 'transform';
+    });
+
+    console.log('跑馬燈無縫接軌已優化');
+  } catch (error) {
+    console.warn("優化無縫接軌時發生錯誤:", error);
+  }
+}
+
+// 頁面載入完成後初始化跑馬燈控制
+window.addEventListener('load', () => {
+  // 優化無縫接軌
+  optimizeSeamlessLoop();
+  
+  // 可選：根據設備性能調整速度
+  if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
+    // 低性能設備降低速度
+    adjustMarqueeSpeed(0.8);
+  }
+});
+
+// 可選：提供全局函數供外部調用
+window.marqueeControls = {
+  adjustSpeed: adjustMarqueeSpeed,
+  optimizeLoop: optimizeSeamlessLoop,
+  pause: () => {
+    const tracks = document.querySelectorAll('.marquee-track');
+    tracks.forEach(track => {
+      track.style.animationPlayState = 'paused';
+    });
+  },
+  resume: () => {
+    const tracks = document.querySelectorAll('.marquee-track');
+    tracks.forEach(track => {
+      track.style.animationPlayState = 'running';
     });
   }
-
-  line.appendChild(track);
-  rwd_container.appendChild(line);
-}
+};

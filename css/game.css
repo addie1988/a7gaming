@@ -575,7 +575,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-33.333%);
+    transform: translateY(-33.33333%);
   }
 }
 
@@ -665,7 +665,7 @@ body {
 
 .feature .feature_content .feature_img .feature_img_content #marqueeTrack li {
   flex: none;
-  width: 20vw;
+  width: 2%;
   list-style: none;
   text-align: center;
   color: #fff;
@@ -701,6 +701,22 @@ body {
   }
   .feature .feature_content .feature_img .feature_img_content ul {
     animation-duration: 20s;
+  }
+  .feature .feature_content .feature_img .feature_img_content ul li img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .feature .feature_content .feature_content_title {
+    width: 90%;
+  }
+  .feature .feature_content .feature_img .feature_img_content ul {
+    animation-duration: 20s;
+  }
+  .feature .feature_content .feature_img .feature_img_content ul li img {
+    width: 100%;
+    margin: 0 30px;
   }
 }
 
@@ -928,6 +944,7 @@ body {
   position: relative;
   background: url(../images/a7_games.png) no-repeat;
   background-size: cover;
+  background-size: contain;
 }
 
 .all_games .all_games_content {
