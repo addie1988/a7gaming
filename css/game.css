@@ -1102,7 +1102,7 @@ body {
   }
   .all_games .all_games_content .all_games_img .all_games_img_content ul li .all_games_list_box_text {
     width: 90%;
-    width-margin-top: 0;
-    width-margin: 13px 0;
+    margin-top: 0;
+    margin: 13px 0;
   }
 }
