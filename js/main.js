@@ -324,7 +324,7 @@ if (container) {
 
     // 為每一行設置不同的動畫速度 - 增加更多變化
     // 基礎速度範圍：30-120 秒，讓每行速度差異更明顯
-    const minDuration = 160;
+    const minDuration = 30;
     const maxDuration = 300;
     const speedVariation = minDuration + Math.random() * (maxDuration - minDuration);
     const animationDuration = speedVariation + (i * 3); // 每行額外增加3秒
