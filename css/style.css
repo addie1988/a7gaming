@@ -375,7 +375,8 @@ body {
 .a7_games {
   position: relative;
   background: url(../images/a7_games.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
 .a7_games .a7_games_content {
