@@ -1100,4 +1100,9 @@ body {
   .all_games .all_games_content .all_games_img .all_games_img_content ul li .all_games_list_box .all_games_list_box_content .all_games_list_box_img {
     display: none;
   }
+  .all_games .all_games_content .all_games_img .all_games_img_content ul li .all_games_list_box_text {
+    width: 90%;
+    margin-top: 0;
+    margin: 13px 0;
+  }
 }
