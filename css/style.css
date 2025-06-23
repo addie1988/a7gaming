@@ -99,7 +99,7 @@ body {
 }
 
 .header .header_content .logo {
-  width: 50%;
+  width: 20%;
 }
 
 .header .header_content .logo .logo_content a {
@@ -107,7 +107,7 @@ body {
 }
 
 .header .header_content .menu_language {
-  width: 50%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
