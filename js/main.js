@@ -322,6 +322,15 @@ if (container) {
       track.classList.add("reverse");
     }
 
+    // 為每一行設置不同的動畫速度 - 增加更多變化
+    // 基礎速度範圍：30-120 秒，讓每行速度差異更明顯
+    const minDuration = 160;
+    const maxDuration = 300;
+    const speedVariation = minDuration + Math.random() * (maxDuration - minDuration);
+    const animationDuration = speedVariation + (i * 3); // 每行額外增加3秒
+    
+    track.style.animationDuration = `${animationDuration}s`;
+
     // 增加複製次數確保無縫接軌 - 從5次增加到8次
     // 這樣可以確保動畫循環時有足夠的內容填充
     for (let j = 0; j < 8; j++) {
@@ -386,8 +395,12 @@ if (rwd_container) {
     track.className = "marquee-track";
     track.classList.add(i % 2 === 0 ? "scroll-left" : "scroll-right");
 
-    // 優化動畫時間，確保無縫接軌
-    const animationDuration = 20 + i * 4;
+    // 為每一行設置不同的動畫速度 - 增加更多變化
+    // 基礎速度範圍：15-45 秒，讓每行速度差異更明顯
+    const minDuration = 15;
+    const maxDuration = 45;
+    const speedVariation = minDuration + Math.random() * (maxDuration - minDuration);
+    const animationDuration = speedVariation + (i * 2); // 每行額外增加2秒
     const animationDelay = -Math.floor(animationDuration / 2);
     track.style.animationDuration = `${animationDuration}s`;
     track.style.animationDelay = `${animationDelay}s`;
@@ -420,7 +433,7 @@ function adjustMarqueeSpeed(speedMultiplier = 1) {
     // 控制桌面版跑馬燈速度
     const desktopTracks = document.querySelectorAll('.marquee-container .marquee-track');
     desktopTracks.forEach((track, index) => {
-      const baseDuration = 110; // 基礎動畫時間
+      const baseDuration = 75; // 調整基礎動畫時間（30-120的平均值）
       const adjustedDuration = baseDuration / speedMultiplier;
       track.style.animationDuration = `${adjustedDuration}s`;
     });
@@ -428,7 +441,7 @@ function adjustMarqueeSpeed(speedMultiplier = 1) {
     // 控制 RWD 跑馬燈速度
     const rwdTracks = document.querySelectorAll('.rwd_marquee-container .marquee-track');
     rwdTracks.forEach((track, index) => {
-      const baseDuration = 20 + index * 4; // 基礎動畫時間
+      const baseDuration = 30 + index * 3; // 調整基礎動畫時間（15-45的範圍）
       const adjustedDuration = baseDuration / speedMultiplier;
       track.style.animationDuration = `${adjustedDuration}s`;
     });

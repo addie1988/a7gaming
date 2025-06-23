@@ -81,11 +81,11 @@ body {
 
 .header {
   position: absolute;
-  width: 1500px;
+  width: 100%;
   height: 70px;
   z-index: 3;
   top: 0px;
-  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .header .header_content {
@@ -480,7 +480,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 40%;
-  height: 700px;
+  height: 450px;
   border: 1px solid #333;
 }
 
@@ -491,7 +491,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  animation: scroll-up 110s linear infinite;
+  animation: scroll-up .3s linear infinite;
 }
 
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .marquee-container .marquee-row .marquee-track img {
@@ -573,10 +573,13 @@ body {
 
 @keyframes scroll-up {
   0% {
-    transform: translateY(0);
+    transform: translateY(-10.55556%);
+  }
+  50% {
+    transform: translateY(-50.55556%);
   }
   100% {
-    transform: translateY(-33.33333%);
+    transform: translateY(-67.0%);
   }
 }
 
