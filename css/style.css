@@ -490,7 +490,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  animation: scroll-up .3s linear infinite;
+  animation: scroll-up .4s linear infinite;
 }
 
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .marquee-container .marquee-row .marquee-track img {
