@@ -572,13 +572,13 @@ body {
 
 @keyframes scroll-up {
   0% {
-    transform: translateY(0);
+    transform: translateY(-22.8px);
   }
   50% {
-    transform: translateY(-33.33333%);
+    transform: translateY(-22.66667%);
   }
   100% {
-    transform: translateY(-67.0%);
+    transform: translateY(-66.44444%);
   }
 }
 
