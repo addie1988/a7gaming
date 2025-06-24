@@ -66,6 +66,7 @@ $p_font_size: 16px
                         background-clip: padding-box, border-box
                         background-origin: padding-box, border-box
                         border-radius: 16px
+                        overflow: hidden
                         .all_games_box
                             position: relative
                             .all_games_box_content
@@ -76,6 +77,7 @@ $p_font_size: 16px
                                     border-top-left-radius: 16px
                                     border-top-right-radius: 16px
                                     object-fit: cover
+                                    transition: .5s ease-in-out
                         .all_games_list_box
                             position: relative
                             display: flex
@@ -115,6 +117,11 @@ $p_font_size: 16px
                                             font-size: 16px
                                             color: #fff
                                             line-height: 1.5
+                        &:hover
+                            .all_games_box
+                                .all_games_box_content
+                                    img
+                                        transform: scale(1.2)
 
 @media screen and (max-width: 1200px)
     .all_games

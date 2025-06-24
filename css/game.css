@@ -490,7 +490,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  animation: scroll-up .3s linear infinite;
+  animation: scroll-up .4s linear infinite;
 }
 
 .a7_games .a7_games_content .a7_games_img .a7_games_img_content .marquee-container .marquee-row .marquee-track img {
@@ -572,13 +572,13 @@ body {
 
 @keyframes scroll-up {
   0% {
-    transform: translateY(0);
+    transform: translateY(-22.8px);
   }
   50% {
-    transform: translateY(-33.33333%);
+    transform: translateY(-22.66667%);
   }
   100% {
-    transform: translateY(-67.0%);
+    transform: translateY(-66.44444%);
   }
 }
 
@@ -1006,6 +1006,7 @@ body {
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   border-radius: 16px;
+  overflow: hidden;
 }
 
 .all_games .all_games_content .all_games_img .all_games_img_content ul li .all_games_box {
@@ -1022,6 +1023,7 @@ body {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   object-fit: cover;
+  transition: .5s ease-in-out;
 }
 
 .all_games .all_games_content .all_games_img .all_games_img_content ul li .all_games_list_box {
@@ -1079,6 +1081,10 @@ body {
   font-size: 16px;
   color: #fff;
   line-height: 1.5;
+}
+
+.all_games .all_games_content .all_games_img .all_games_img_content ul li:hover .all_games_box .all_games_box_content img {
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 1200px) {
