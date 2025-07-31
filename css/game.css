@@ -48,7 +48,7 @@ table {
   border-spacing: 0;
 }
 
-.header_div .header_div_content, .header, .a7_games .a7_games_content .a7_games_content_title .a7_games_content_title_content a .a7_games_a, .footer .footer_content .footer_text .footer_text_content ul li .contact_details .contact_details_content .contact_details_img .contact_details_img_content {
+.header, .a7_games .a7_games_content .a7_games_content_title .a7_games_content_title_content a .a7_games_a, .footer .footer_content .footer_text .footer_text_content ul li .contact_details .contact_details_content .contact_details_img .contact_details_img_content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,10 +66,6 @@ body {
   position: relative;
 }
 
-.header_div .header_div_content {
-  margin: 0 auto;
-}
-
 .spacer {
   height: 0;
   transition: height 0.3s ease;
@@ -80,12 +76,10 @@ body {
 }
 
 .header {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 70px;
   z-index: 3;
-  top: 0px;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .header .header_content {
@@ -257,7 +251,6 @@ body {
   position: relative;
   z-index: -2;
   width: 100%;
-  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -272,12 +265,14 @@ body {
 }
 
 .banner .banner_content .banner_img {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: end;
 }
 
 .banner .banner_content .banner_img .banner_img_content {
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -937,7 +932,7 @@ body {
   }
 }
 
-.header_div .header_div_content, .header, .a7_games .a7_games_content .a7_games_content_title .a7_games_content_title_content a .a7_games_a, .footer .footer_content .footer_text .footer_text_content ul li .contact_details .contact_details_content .contact_details_img .contact_details_img_content {
+.header, .a7_games .a7_games_content .a7_games_content_title .a7_games_content_title_content a .a7_games_a, .footer .footer_content .footer_text .footer_text_content ul li .contact_details .contact_details_content .contact_details_img .contact_details_img_content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1006,6 +1001,7 @@ body {
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   border-radius: 16px;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
