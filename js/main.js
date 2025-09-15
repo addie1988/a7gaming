@@ -5,11 +5,14 @@ const spacer = document.getElementById("spacer");
 if (header && spacer) {
   window.addEventListener("scroll", () => {
     try {
+      // 鎖住水平滾動
+      window.scrollTo(window.scrollX, window.scrollY);
+      
       if (window.scrollY > 90) {
         header.classList.add("fixed");
         spacer.classList.add("active"); // 防止內容跳動
       } else {
-        header.classList.remove("fixed");
+        header.classList.remove("fixed"); 
         spacer.classList.remove("active");
       }
     } catch (error) {
