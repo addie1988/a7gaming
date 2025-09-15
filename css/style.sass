@@ -69,6 +69,7 @@ body
 .header_div
     position: relative
     .header_div_content
+        position: relative
 .spacer
     height: 0
     transition: height 0.3s ease
@@ -236,6 +237,7 @@ body
     .header
         width: 100%
         .header_content
+            width: 100%
             .logo
             .menu_language
                 .menu_language_content
@@ -294,11 +296,20 @@ body
                     z-index: -1
                     img
 
+@media screen and (max-width: 1550px)
+    .header_div
+        .header_div_content
+            .spacer
+            .fixed
+                .header_content
+                    width: 100%
+
 @media screen and (max-width: 1400px)
     .header_div
         .header_div_content
-            .header
+            .fixed
                 .header_content
+                    width: 100%
                     .logo
                     .menu_language
             .banner
@@ -308,7 +319,7 @@ body
 @media screen and (max-width: 1690px)
     .header_div
         .header_div_content
-            .header
+            .fixed
             .banner
                 height: 300px
                 background: url(../images/banner.jpg)
